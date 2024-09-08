@@ -1,16 +1,7 @@
 # tabletki
 
-A new Flutter project.
+![image](https://github.com/user-attachments/assets/85acb3ba-aea4-46f9-a16c-30fd7d2d549d)
+![image](https://github.com/user-attachments/assets/311c0266-26be-4614-8dec-781da6c5b0d9)
+![image](https://github.com/user-attachments/assets/fb06de8f-9098-49da-bf57-71a0edba2425)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
