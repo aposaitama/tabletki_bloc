@@ -5,7 +5,7 @@ class EmptyCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titleText = TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
+    const titleText = TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -15,15 +15,14 @@ class EmptyCart extends StatelessWidget {
             color: Colors.black.withOpacity(0.1), // Shadow color with opacity
             spreadRadius: 2, // Spread radius
             blurRadius: 10, // Blur effect
-            offset:
-                Offset(0, 5), // Horizontal and vertical offset of the shadow
+            offset: const Offset(
+                0, 5), // Horizontal and vertical offset of the shadow
           ),
         ],
       ),
       width: 400,
-      child: Padding(
-        padding:
-            const EdgeInsets.only(top: 40, bottom: 30, left: 10, right: 10),
+      child: const Padding(
+        padding: EdgeInsets.only(top: 40, bottom: 30, left: 10, right: 10),
         child: Column(
           children: [
             Text(

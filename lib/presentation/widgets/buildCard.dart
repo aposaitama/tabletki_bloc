@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class buildCard extends StatelessWidget {
@@ -25,17 +24,17 @@ class buildCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SvgPicture.asset(
-                  this.imagePath, // Replace with your SVG file path
+                  imagePath, // Replace with your SVG file path
                   height: 45, // Set the height and width as needed
                   width: 45,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
-                Flexible(child: Text(this.title)),
+                Flexible(child: Text(title)),
               ],
             ),
-            Flexible(child: Text(this.description)),
+            Flexible(child: Text(description)),
           ],
         ),
       ),

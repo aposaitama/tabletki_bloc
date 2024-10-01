@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tabletki/widgets/HomeAppBar.dart';
-import 'package:tabletki/widgets/HomeSearchField.dart';
+import 'package:tabletki/presentation/widgets/HomeAppBar.dart';
+import 'package:tabletki/presentation/widgets/HomeSearchField.dart';
 import 'package:tabletki/widgets/HomeTutorial.dart';
 
 class MainPage extends StatelessWidget {
@@ -10,7 +10,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [
+        children: const [
           HomeAppBar(),
           HomeSearchField(),
           HomeTutorial(),

@@ -16,7 +16,7 @@ class HomeSearchField extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
             hintText: 'Пошук...',
-            prefixIcon: Icon(
+            prefixIcon: const Icon(
               Icons.search,
               size: 30,
               color: Colors.green,

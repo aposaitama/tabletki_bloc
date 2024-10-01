@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 Medicines medicinesFromJson(String str) => Medicines.fromJson(json.decode(str));

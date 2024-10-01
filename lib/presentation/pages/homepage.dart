@@ -1,8 +1,6 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:tabletki/presentation/pages/cartPage.dart';
-import 'package:tabletki/presentation/pages/catalogPage.dart';
 import 'package:tabletki/presentation/pages/mainPage.dart';
 import 'package:tabletki/presentation/pages/profilePage.dart';
 import 'package:tabletki/presentation/pages/searchPage.dart';
@@ -28,11 +26,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> bottomBarPages = [
-    MainPage(),
-    SearchPage(),
-    CartPage(),
-    ShoppingHistoryPage(),
-    ProfilePage(),
+    const MainPage(),
+    const SearchPage(),
+    const CartPage(),
+    const ShoppingHistoryPage(),
+    const ProfilePage(),
   ];
 
   @override
@@ -54,29 +52,29 @@ class _HomePageState extends State<HomePage> {
               notchBottomBarController: _controller,
               // bottomBarHeight: 20,
               bottomBarItems: [
-                BottomBarItem(
+                const BottomBarItem(
                     inActiveItem: Icon(Icons.home),
                     activeItem: Icon(
                       Icons.home,
                       color: Color.fromRGBO(67, 176, 42, 1),
                     ),
                     itemLabel: 'Головна'),
-                BottomBarItem(
+                const BottomBarItem(
                     inActiveItem: Icon(Icons.search),
                     activeItem:
                         Icon(Icons.home, color: Color.fromRGBO(67, 176, 42, 1)),
                     itemLabel: 'Каталог'),
-                BottomBarItem(
+                const BottomBarItem(
                     inActiveItem: Icon(Icons.shopping_basket),
                     activeItem:
                         Icon(Icons.home, color: Color.fromRGBO(67, 176, 42, 1)),
                     itemLabel: 'Кошик'),
-                BottomBarItem(
+                const BottomBarItem(
                     inActiveItem: Icon(Icons.history),
                     activeItem:
                         Icon(Icons.home, color: Color.fromRGBO(67, 176, 42, 1)),
                     itemLabel: 'Історія'),
-                BottomBarItem(
+                const BottomBarItem(
                     inActiveItem: Icon(Icons.person),
                     activeItem:
                         Icon(Icons.home, color: Color.fromRGBO(67, 176, 42, 1)),

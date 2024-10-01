@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tabletki/data/repository/medicines.dart';
+
+import 'package:tabletki/component/model/medicines.dart';
 
 class MedicineTile extends StatelessWidget {
   final Datum medicine;
-  final Function()? onTap;
-  const MedicineTile({super.key, required this.medicine, required this.onTap});
+  final Function()? onTapName;
+  final Function()? onTapCart;
+  const MedicineTile(
+      {super.key,
+      required this.medicine,
+      required this.onTapCart,
+      required this.onTapName});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class MedicineTile extends StatelessWidget {
               width: 200,
               height: 200,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Expanded(
@@ -29,16 +35,19 @@ class MedicineTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      medicine.name,
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: onTapName,
+                      child: Text(
+                        medicine.name,
+                        style: const TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     Text(
                       medicine.description,
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -46,20 +55,20 @@ class MedicineTile extends StatelessWidget {
                       children: [
                         Text(
                           "Ціна: ${medicine.price.toString()}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     InkWell(
                       hoverColor: Colors.red,
-                      onTap: onTap,
+                      onTap: onTapCart,
                       onHover: (value) {},
                       child: Container(
                         decoration: BoxDecoration(
@@ -67,7 +76,7 @@ class MedicineTile extends StatelessWidget {
                             border: Border.all(color: Colors.red)),
                         width: 200,
                         height: 30,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Додати до кошика',
                             style: TextStyle(color: Colors.red),
@@ -78,7 +87,7 @@ class MedicineTile extends StatelessWidget {
                   ]),
             )
           ]),
-          Divider()
+          const Divider()
         ],
       ),
     );
